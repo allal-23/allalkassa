@@ -1,5 +1,5 @@
 import logo from "../../assets/images/logo/LOGO.svg";
-import Nav from "../nav/Nav";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -7,7 +7,14 @@ export default function Header() {
       <figure className="header__fig">
         <img className="logo" src={logo} alt="logo de l'agence kasa" />
       </figure>
-      <Nav className="nav-header" />
+      <nav className="nav-header">
+        <NavLink to="/" className="nav-header__nav-link-home">
+          Accueil
+        </NavLink>
+        <NavLink to="/about" className="nav-header__nav-link-about">
+          A Propos
+        </NavLink>
+      </nav>
     </header>
   );
 }
