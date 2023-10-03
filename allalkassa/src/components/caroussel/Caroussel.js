@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Carrousel({ slides }) {
   /* Crée un Hook d'état */
@@ -21,12 +26,12 @@ function Carrousel({ slides }) {
     <section className="slide">
       {length > 1 && (
         <p className="left-Arrow" onClick={prevImage}>
-          <i className="fa-solid fa-chevron-left"></i>
+          <FontAwesomeIcon icon={faChevronLeft} />
         </p>
       )}
       {length > 1 && (
         <p className="right-Arrow" onClick={nextImage}>
-          <i className="fa-solid fa-chevron-right"></i>
+          <FontAwesomeIcon icon={faChevronRight} />
         </p>
       )}
       {slides.map((image, index) => {
