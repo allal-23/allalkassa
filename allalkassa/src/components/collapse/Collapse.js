@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import flecheHaut from "../../assets/images/haut/fleche-haut.png";
+import flecheBas from "../../assets/images/haut/fleche-bas.png";
 
 const Collapse = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,10 @@ const Collapse = ({ title, content }) => {
       <div className="collapse__dropdown__title">
         <h2>{title}</h2>
         <p onClick={toggleCollapse}>
-          <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
+          <img
+            src={isOpen ? flecheHaut : flecheBas}
+            alt={isOpen ? "Fleche Haut" : "Fleche Bas"}
+          />
         </p>
       </div>
       <div className="collapse__dropdown__content">

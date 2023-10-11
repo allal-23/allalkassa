@@ -23,4 +23,9 @@
       text-decoration-line: underline;
     }
   }
+
+  &__nav-link-home.active,
+  &__nav-link-about.active {
+    text-decoration-line: underline; // Surligne le lien actif
+  }
 }
